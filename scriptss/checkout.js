@@ -8,8 +8,8 @@ import {deliveryOptions} from '../data/deliveryOptions.js';
    hello();
    const today = dayjs();
    const deliveryDate = today.add(7,'days');
-   deliveryDate.format('dddd,MMMM D');
-   
+   console.log(deliveryDate.format('dddd,MMMM D'));
+   function renderOrdersummary(){
 let cartSummaryHTML ='';
 
 cart.forEach((cartItem)=>{
@@ -116,6 +116,7 @@ document.querySelectorAll('.js-delete-link')
   link.addEventListener('click',()=>{
     const productId = link.dataset.productId;
     removeFromCart(productId);
+
     const container =document.querySelector(
         `.js-cart-item-container-${productId}`
     );
@@ -127,5 +128,8 @@ document.querySelectorAll('.js-delivery-option')
   element.addEventListener('click',()=>{
     const {productId,deliveryOptionId} =  element.dataset;
     updateDeliveryOption(productId,deliveryOptionId);
+    renderOrdersummary();
   });
 });
+   }
+   renderOrdersummary();
