@@ -1,6 +1,9 @@
 import {cart,addToCart} from '../data/cart.js';
-import {products} from '../data/products.js';
+import {products,loadProducts} from '../data/products.js';
 import formatCurrency from './utils/money.js';
+loadProducts(renderProductsGrid);
+function renderProductsGrid(){
+
 let productsHTML = '';
 products.forEach((product)=>{
     productsHTML += `
@@ -81,3 +84,4 @@ document.querySelector('.js-products-grid').innerHTML
             
         });
       });
+    }
