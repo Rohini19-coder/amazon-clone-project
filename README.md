@@ -21,12 +21,4 @@ The project is designed to simulate the front-end of an e-commerce platform, pro
 
 ---
 
-## 📷 Project Preview
-(Add screenshots here if you have them – e.g., homepage, cart page)
-
 ---
-
-## 📂 Project Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Rohini19-coder/amazon-clone-project.git
